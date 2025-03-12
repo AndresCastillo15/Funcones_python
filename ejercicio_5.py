@@ -1,18 +1,22 @@
 # construir una funcion que reciba como parametro una lista de datos numericos y retorne el promedio de los daots pares.
 import random
-def promedio_pares(numeros):
+def suma_y_promedio_pares(numeros):
     pares = [num for num in numeros if num % 2 == 0]
     if len(pares) == 0:
-        return 0
-    return sum(pares) / len(pares)
+        return "No hay números pares en la lista"
+    suma = sum(pares)
+    promedio = suma / len(pares)
+    return suma, promedio
 
-print
-lista_numeros = []
-#tamaño de la lista
-n = int(input("digite el tamaño de la lista: "))
-for i in range(n):
-    num = random.randint(1,100)
-    lista_numeros.append(num) 
+n = int(input("Digite el tamaño de la lista: "))
+lista_numeros = [random.randint(1, 9) for _ in range(n)]
 
-resultado = promedio_pares(lista_numeros)
-print("El promedio de los números pares es:", resultado)
+print("Los números generados son:", lista_numeros)
+
+suma, promedio = suma_y_promedio_pares(lista_numeros)
+
+if suma == "No hay números pares en la lista":
+    print(suma)
+else:
+    print("La suma de los números pares es:", suma)
+    print("El promedio de los números pares es:", promedio)
