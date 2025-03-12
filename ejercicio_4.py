@@ -4,6 +4,17 @@ def promedio_lista(numeros):
         return 0  
     return sum(numeros) / len(numeros)
 
+import random
+# creamos una lista vacia
+lista = []
+#tamaño de la lista
+n = int(input("digite el tamaño de la lista: "))
+for i in range(n):
+    num = random.randint(1,100)
+    lista.append(num) 
+print("lista: ", lista)
+
 lista_numeros = [10, 20, 30, 40, 50]
-resultado = promedio_lista(lista_numeros)
+print("lista de numeros: ", lista)
+resultado = promedio_lista(lista)
 print("El promedio de los números es:", resultado)

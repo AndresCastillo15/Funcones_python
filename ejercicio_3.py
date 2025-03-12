@@ -2,13 +2,23 @@
 print("="*30)
 print("Suma en una lista")
 print("="*30)
-
+import random
 def sumar_lista(numeros):
+    sumar_lista = 0
+    for i in lista:
+        sumar_lista = sumar_lista + 1
     return sum(numeros)
 
+# creamos una lista vacia
+lista = []
+#tamaño de la lista
+n = int(input("digite el tamaño de la lista: "))
+for i in range(n):
+    num = random.randint(1,9)
+    lista.append(num) 
+print("lista: ", lista)
 
-lista_numeros = [1, 2, 3, 4, 5]
-resultado = sumar_lista(lista_numeros)
+resultado = sumar_lista(lista)
 print("La suma de los números es:", resultado)
 
 

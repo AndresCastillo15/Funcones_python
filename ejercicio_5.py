@@ -5,7 +5,7 @@ def promedio_pares(numeros):
         return 0
     return sum(pares) / len(pares)
 
-
+print
 lista_numeros = [10, 15, 20, 25, 30]
 resultado = promedio_pares(lista_numeros)
 print("El promedio de los números pares es:", resultado)
